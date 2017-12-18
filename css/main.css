@@ -1,9 +1,24 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
 html {
-  @-moz-viewport { width: device-width; scale: 1; }
-  @-ms-viewport { width: device-width; scale: 1; }
-  @-o-viewport { width: device-width; scale: 1; }
-  @-webkit-viewport { width: device-width; scale: 1; }
-  @viewport { width: device-width; scale: 1; }
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.cards {
+  padding: 0;
+  list-style-type: none;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 img {
@@ -40,11 +55,11 @@ h2 {
   margin: 0 0 .5rem;
 }
 
-.card-body {
+.card-body p {
   text-align: left;
 }
 
-.card-img {
+.card-img img {
   max-width: 20%;
   margin-left: 3em;
 }
@@ -65,10 +80,14 @@ h2 {
     vertical-align: middle;
   }
 
-  .card-body {
+  .card-body h2 {
     display: inline-block;
     vertical-align: middle;
     width: 70%;
+  }
+
+  .card-img {
+    display: block;
   }
 
   p {
@@ -90,6 +109,10 @@ h2 {
   img {
     max-width: 30%;
     margin: 0;
+  }
+
+  .card-img img {
+    padding: 0;
   }
 
   body {
@@ -128,6 +151,10 @@ h2 {
   h1, p {
     margin: 0 0 1.5rem;
   }
+}
+
+.card-body h2 {
+  padding: 0;
 }
 
 @media only screen and (min-width: 90em) {
